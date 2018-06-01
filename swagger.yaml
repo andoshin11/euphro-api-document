@@ -1,0 +1,68 @@
+swagger: '2.0'
+info:
+  description: >-
+    This is a Euphro API Document.
+  version: 0.0.1
+  title: Euphro API Document
+  termsOfService: 'TBD'
+  contact:
+    email: shinglish11@gmail.com
+host: localhost:8080
+basePath: /v1
+tags:
+  - name: museums
+schemes:
+  - http
+paths:
+  /museums:
+    get:
+      tags:
+        - museums
+      summary: "returns museums list"
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Museum"
+            example:
+              - id: 1
+                address: "東京都新宿区中井2-20-1"
+                latitude: 35.7157786
+                longitude: 139.6840892
+                name: "林芙美子記念館"
+              - id: 2
+                address: "東京都港区南青山6-6-20K’s南青山ビル1F"
+                latitude: 35.660775
+                longitude: 139.7159107
+                name: "伊勢半本店 紅ミュージアム"
+              - id: 3
+                address: "東京都港区芝5-28-4港区立三田図書館4階"
+                latitude: 35.6470442
+                longitude: 139.7452084
+                name: "港区立港郷土資料館"
+              - id: 4
+                address: "東京都台東区谷中7-6-3"
+                latitude: 35.7243832
+                longitude: 139.769243
+                name: "寺町美術館＆GALLERY"
+definitions:
+  Museum:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      address:
+        type: string
+      latitude:
+        type: number
+        format: float
+      longitude:
+        type: number
+        format: float
+      name:
+        type: string

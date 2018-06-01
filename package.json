@@ -1,0 +1,12 @@
+{
+  "name": "euphro-api-document",
+  "version": "0.0.1",
+  "author": "andoshin11 <shinglish11@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "swagger-editor-live ./swagger.yaml --port=8085"
+  },
+  "dependencies": {
+    "swagger-editor-live": "andoshin11/swagger-editor-live"
+  }
+}
