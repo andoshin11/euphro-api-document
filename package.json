@@ -10,5 +10,11 @@
   },
   "dependencies": {
     "swagger-editor-live": "andoshin11/swagger-editor-live"
-  }
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "build"
+  ]
 }
